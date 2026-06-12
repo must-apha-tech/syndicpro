@@ -11,6 +11,8 @@ use App\Http\Controllers\Paiements\PaiementController;
 use App\Http\Controllers\Dashboard\DashboardController;
 use App\Http\Controllers\AG\AssemblyController;
 use App\Http\Controllers\Incidents\IncidentController;
+use App\Http\Controllers\Auth\RegisterWithCodeController;
+use App\Http\Controllers\Residences\AccessCodeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -57,4 +59,13 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('/incidents', [IncidentController::class, 'index']);
     Route::post('/incidents', [IncidentController::class, 'store']);
     Route::patch('/incidents/{id}/status', [IncidentController::class, 'updateStatus']);
+
+    // Access Codes (Syndic management)
+    Route::post('/residences/{residence}/lots/{lot}/access-code', [AccessCodeController::class, 'generate']);
+    Route::get('/residences/{residence}/access-codes', [AccessCodeController::class, 'list']);
+    Route::delete('/access-codes/{accessCode}', [AccessCodeController::class, 'revoke']);
 });
+
+// Public Access Code routes
+Route::post('/auth/validate-code', [RegisterWithCodeController::class, 'validateCode']);
+Route::post('/auth/register-with-code', [RegisterWithCodeController::class, 'register']);

@@ -1,0 +1,264 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 20px;
+  background-color: #f0f2f5;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.header h2 {
+  color: #1a3353;
+  margin-bottom: 20px;
+}
+
+.steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.step {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #d9d9d9;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.step.active {
+  background: #1890ff;
+}
+
+.stepLine {
+  height: 2px;
+  width: 40px;
+  background: #d9d9d9;
+  margin: 0 10px;
+  transition: all 0.3s ease;
+}
+
+.stepLine.active {
+  background: #1890ff;
+}
+
+.stepTitle {
+  font-size: 0.9rem;
+  color: #595959;
+  font-weight: 500;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.inputGroup label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #262626;
+}
+
+.inputGroup input {
+  padding: 10px 12px;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.inputGroup input:focus {
+  outline: none;
+  border-color: #1890ff;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+
+.codeInput {
+  text-align: center;
+  font-family: monospace;
+  letter-spacing: 4px;
+  font-size: 1.5rem !important;
+  text-transform: uppercase;
+}
+
+.hint {
+  font-size: 0.8rem;
+  color: #8c8c8c;
+}
+
+.button {
+  padding: 12px;
+  background: #1890ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.button:hover:not(:disabled) {
+  background: #40a9ff;
+}
+
+.button:disabled {
+  background: #bfbfbf;
+  cursor: not-allowed;
+}
+
+.secondaryButton {
+  padding: 12px;
+  background: white;
+  color: #595959;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.secondaryButton:hover {
+  color: #1890ff;
+  border-color: #1890ff;
+}
+
+.errorAlert {
+  background: #fff1f0;
+  border: 1px solid #ffa39e;
+  padding: 10px;
+  border-radius: 6px;
+  color: #cf1322;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.infoStep {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.infoCard {
+  background: #fafafa;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #f0f0f0;
+}
+
+.infoCard h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: #1a3353;
+}
+
+.infoCard p {
+  margin: 0;
+  color: #595959;
+  font-size: 0.9rem;
+}
+
+.lotDetails {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  font-size: 0.9rem;
+}
+
+.confirmMsg {
+  text-align: center;
+  font-weight: 500;
+  color: #262626;
+}
+
+.buttonGroup {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.strengthBar {
+  height: 4px;
+  background: #f0f0f0;
+  border-radius: 2px;
+  margin-top: 5px;
+  overflow: hidden;
+}
+
+.strengthFill {
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.strengthText {
+  font-size: 0.75rem;
+  color: #8c8c8c;
+  margin: 4px 0 0 0;
+}
+
+.requirements {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  font-size: 0.75rem;
+  padding: 12px;
+  background: #fafafa;
+  border-radius: 6px;
+}
+
+.requirements div {
+  color: #bfbfbf;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.requirements div.met {
+  color: #52c41a;
+  font-weight: 600;
+}
+
+.checkboxGroup {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.checkboxGroup input {
+  width: 16px;
+  height: 16px;
+}
+
+.checkboxGroup label {
+  font-size: 0.85rem;
+  color: #595959;
+}
